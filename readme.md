@@ -19,3 +19,9 @@
 ## Apollo e GraphQl
 
 - npm i @apollo/client graphql
+
+## ClassNames
+
+- https://www.npmjs.com/package/classnames
+- Instalar dependências:  
+  npm install classnames
