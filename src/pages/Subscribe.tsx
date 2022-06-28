@@ -73,9 +73,6 @@ export const Subscribe = () => {
         </div>
 
         <img src={imgUrl} alt="" className="mt-10" />
-        <div className="w-full max-w-[1100px]">
-          <Footer />
-        </div>
       </div>
     </>
   );
