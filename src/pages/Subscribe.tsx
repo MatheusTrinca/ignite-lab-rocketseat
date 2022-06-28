@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Logo } from '../components/Logo';
 import { Footer } from '../components/Footer';
 import { useCreateSubscriberMutation } from '../generated';
+import imgUrl from '../assets/code-mockup.png';
 
 export const Subscribe = () => {
   const [name, setName] = React.useState('');
@@ -71,7 +72,7 @@ export const Subscribe = () => {
           </div>
         </div>
 
-        <img src="/src/assets/cold-mockup.png" alt="" className="mt-10" />
+        <img src={imgUrl} alt="" className="mt-10" />
         <div className="w-full max-w-[1100px]">
           <Footer />
         </div>
