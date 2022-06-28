@@ -1,16 +1,8 @@
 import React, { FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { gql, useMutation } from '@apollo/client';
 import { Logo } from '../components/Logo';
 import { Footer } from '../components/Footer';
-
-const CREATE_SUBSCRIBER = gql`
-  mutation CreateSubscriber($name: String!, $email: String!) {
-    createSubscriber(data: { name: $name, email: $email }) {
-      id
-    }
-  }
-`;
+import { useCreateSubscriberMutation } from '../generated';
 
 export const Subscribe = () => {
   const [name, setName] = React.useState('');
@@ -18,7 +10,7 @@ export const Subscribe = () => {
 
   const navigate = useNavigate();
 
-  const [createSubscriber, { data, loading }] = useMutation(CREATE_SUBSCRIBER, {
+  const [createSubscriber, { data, loading }] = useCreateSubscriberMutation({
     variables: {
       name,
       email,
